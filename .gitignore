@@ -1,0 +1,5 @@
+!state/.keep
+!src/.keep
+state/*
+src/*
+log.txt
