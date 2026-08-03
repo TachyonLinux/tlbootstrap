@@ -35,3 +35,4 @@ export FAKEROOT_URL="https://github.com/TachyonLinux/fakeroot/archive/refs/tags/
 export PAXUTILS_URL="https://github.com/gentoo/pax-utils/archive/refs/tags/v1.3.11.tar.gz"
 export ABUILD_URL="https://github.com/alpinelinux/abuild/archive/refs/tags/3.17.0.tar.gz"
 export M4_URL="https://ftp.gnu.org/gnu/m4/m4-1.4.21.tar.gz"
+export GMAKE_URL="https://ftp.gnu.org/gnu/make/make-4.4.tar.gz"

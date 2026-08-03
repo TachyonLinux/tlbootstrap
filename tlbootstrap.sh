@@ -100,6 +100,7 @@ varcheck() {
 	PAXUTILS_URL \
 	ABUILD_URL \
 	M4_URL \
+	GMAKE_URL \
         ZSTD_URL || { 
             log "Variables are missing. [ List sent to stdout ]" >>"$LOGPATH"
             die "tlbootstrap" "Missing configuration. Edit '$BOOTSTRAP_DIR/lib/config.sh'."
