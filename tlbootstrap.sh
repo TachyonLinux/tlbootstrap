@@ -97,6 +97,9 @@ varcheck() {
         OPENSSL_URL \
         APKTOOLS_URL \
         FAKEROOT_URL \
+	PAXUTILS_URL \
+	ABUILD_URL \
+	M4_URL \
         ZSTD_URL || { 
             log "Variables are missing. [ List sent to stdout ]" >>"$LOGPATH"
             die "tlbootstrap" "Missing configuration. Edit '$BOOTSTRAP_DIR/lib/config.sh'."
@@ -131,6 +134,18 @@ cmdcheck() {
             log "Commands are missing. [ List sent to stdout ]" >>"$LOGPATH"
             die "tlbootstrap" "Missing commands."
         }
+}
+
+unpoisonenv() {
+	unset CC
+	unset LD
+	unset AS
+	unset AR
+	unset CXX
+	unset CXXFLAGS
+	unset CFLAGS
+	unset LDFLAGS
+	unset CPPFLAGS
 }
 
 initialcheck() {
@@ -185,6 +200,7 @@ build() {
     log "Running tlbootstrap $TOOL_VERSION, Interpreter for stage scripts: $SHELL, $(date +"%a %d %b %Y %H:%M:%S %z")" >>"$LOGPATH"
     log "Trying to build '$TARGET'" >>"$LOGPATH"
     initialcheck
+    unpoisonenv
     chdir "$BOOTSTRAP_DIR"
     checkstages
     setupdirs

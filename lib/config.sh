@@ -34,3 +34,4 @@ export ZSTD_URL="https://github.com/facebook/zstd/releases/download/v1.5.7/zstd-
 export FAKEROOT_URL="https://github.com/TachyonLinux/fakeroot/archive/refs/tags/v0.1.tar.gz"
 export PAXUTILS_URL="https://github.com/gentoo/pax-utils/archive/refs/tags/v1.3.11.tar.gz"
 export ABUILD_URL="https://github.com/alpinelinux/abuild/archive/refs/tags/3.17.0.tar.gz"
+export M4_URL="https://ftp.gnu.org/gnu/m4/m4-1.4.21.tar.gz"
