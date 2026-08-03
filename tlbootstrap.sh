@@ -126,6 +126,7 @@ cmdcheck() {
         autoreconf \
         libtoolize \
         meson \
+	scdoc \
         ninja || { 
             log "Commands are missing. [ List sent to stdout ]" >>"$LOGPATH"
             die "tlbootstrap" "Missing commands."
